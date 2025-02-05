@@ -1,0 +1,47 @@
+.scroll-container {
+    width: 850px;  /* Adjust the width as needed */
+    overflow:hidden;  /* Hide the scrollbar */
+}
+
+.scroll-row {
+    display: flex;
+    gap: 20px; /* Space between cards */
+    padding: 10px;
+    /* transition: scroll 0.2s ease-in-out;  /* Optional smooth scrolling transition */
+    /* scroll-behavior: smooth; */
+    animation: scroll-left 10s linear infinite;
+}
+
+.skillcard {
+    width: 100px; /* Adjust card size */
+    height: 100px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex-shrink: 0; /* Prevent cards from shrinking */
+}
+
+.skillcardinner {
+    /* width: 70px; /* Adjust card size */
+    /* height: 70px; */
+    max-width: 90%;
+    max-height: 90%;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    /* padding: 20px; */
+    text-align: center;
+    flex-shrink: 0; /* Prevent cards from shrinking */
+}
+
+/* Scroll animation */
+@keyframes scroll-left {
+    0% {
+      transform: translateX(0);  /* Start from the right */
+    }
+    100% {
+      transform: translateX(-100%);  /* Scroll to the left */
+    }
+  }
